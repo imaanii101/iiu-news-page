@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIU News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <button id="themeBtn">Toggle Light/Dark Mode</button>
+
+  <header>
+    <h1>IIU News</h1>
+    <p id="status"></p>
+    <p>All the latest updates from IIU Islamabad, in one place.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#news">News</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="news">
+      <h2>Top Stories</h2>
+      <img src="campus.jpg" alt="IIU Campus">
+      <div class="card">
+        <h3>Spring Admissions Open</h3>
+        <p>Apply before 30 November</p>
+      </div>
+      <div class="card">
+        <h3>Career Seminar</h3>
+        <p>5 November, Main Auditorium</p>
+      </div>
+      <div class="card">
+        <h3>Inter-Department Cricket</h3>
+        <p>8 November, Sports Ground</p>
+      </div>
+    </section>
+
+    <section class="steps">
+      <h2>How to Apply</h2>
+      <ol type="A">
+        <li>Visit the admissions portal</li>
+        <li>Fill the application form</li>
+        <li>Submit fee and check merit list</li>
+      </ol>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <article id="aboutArticle">
+        <p>International Islamic University Islamabad is one of the top universities of Pakistan.</p>
+        <p id="moreText" style="display:none;">
+          IIU offers many programs in computer science, engineering, law and management.
+          Thousands of students study here every year and take part in sports, seminars and events.
+        </p>
+        <button id="readMoreBtn">Read More</button>
+      </article>
+      <p>Follow us on <a href="https://www.instagram.com" target="_blank">Instagram</a> and <a href="https://www.facebook.com" target="_blank">Facebook</a></p>
+    </section>
+
+    <section class="price-list">
+      <h2>All News</h2>
+      <div class="filters">
+        <button class="filter-btn">All</button>
+        <button class="filter-btn">Academic</button>
+        <button class="filter-btn">Events</button>
+        <button class="filter-btn">Sports</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Headline</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-category="Academic">
+            <td>Spring Admissions Open</td>
+            <td>1 Nov</td>
+          </tr>
+          <tr data-category="Events">
+            <td>Career Seminar</td>
+            <td>5 Nov</td>
+          </tr>
+          <tr data-category="Sports">
+            <td>Inter-Department Cricket</td>
+            <td>8 Nov</td>
+          </tr>
+          <tr data-category="Academic">
+            <td>Mid Term Date Sheet Released</td>
+            <td>10 Nov</td>
+          </tr>
+          <tr data-category="Events">
+            <td>Tech Workshop</td>
+            <td>12 Nov</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="order-section">
+      <h2>Event Registration Total</h2>
+      <ul class="order-list">
+        <li><label><input type="checkbox" class="item" value="300"> Career Seminar - Rs. 300</label></li>
+        <li><label><input type="checkbox" class="item" value="500"> Tech Workshop - Rs. 500</label></li>
+        <li><label><input type="checkbox" class="item" value="200"> Sports Pass - Rs. 200</label></li>
+      </ul>
+      <p id="total">Total: Rs. 0</p>
+    </section>
+
+    <section id="contact">
+      <h2>Send Feedback</h2>
+      <form id="feedbackForm">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="useremail">Email:</label>
+        <input type="text" id="useremail" name="useremail">
+
+        <label for="birth-year">Birth Year:</label>
+        <input type="text" id="birth-year" placeholder="e.g. 2002">
+
+        <p>I am a:</p>
+        <label class="inline"><input type="radio" name="role" value="student" checked> Student</label>
+        <label class="inline"><input type="radio" name="role" value="visitor"> Visitor</label>
+
+        <p>Updates:</p>
+        <label class="inline"><input type="checkbox" name="updates" value="news"> Weekly news</label>
+        <label class="inline"><input type="checkbox" name="updates" value="events"> Event alerts</label>
+
+        <label for="request">Special Request:</label>
+        <textarea id="request" maxlength="100" rows="4"></textarea>
+        <p id="charCount">100 characters remaining</p>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="formMessage"></p>
+      <p id="discountMessage"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 IIU News | International Islamic University, Islamabad</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
